@@ -38,5 +38,6 @@ Thumbs.db
 # Additional local files
 !.env.example
 *.sqlite
+*.log
 venv/
 .venv/
