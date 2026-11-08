@@ -751,7 +751,7 @@ void main() {
       if (!this.container) return;
 
       this.settings = Object.assign({
-        src: '/static/images/hisabai_logo_showcase.png',
+        src: '/static/images/hisabai_logo_showcase.png?v=3',
         color: '#ffeacc',
         glowColor: '#f59e0b',
         scale: 0.76,

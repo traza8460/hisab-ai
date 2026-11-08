@@ -413,7 +413,7 @@ def dispatch_receipt_email_job(receipt_id: int):
             return
 
         shop_user = db.query(User).filter(User.id == receipt.shop_id).first()
-        shop_name = (shop_user.shop_name if shop_user and shop_user.shop_name else "HisabAI Khata")
+        shop_name = (shop_user.shop_name if shop_user and shop_user.shop_name else "Hisab AI Khata")
         owner_name = (shop_user.owner_name if shop_user and shop_user.owner_name else (shop_user.username if shop_user else "Store Owner"))
         shop_phone = (shop_user.phone if shop_user and shop_user.phone else None)
 

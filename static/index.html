@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>HisabAI — Smart Digital Ledger for Your Business</title>
+  <title>Hisab AI — AI Powered Digital Ledger </title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -168,13 +168,12 @@
 
     .auth-split-wrapper {
       width: 100%;
-      max-width: 1140px;
-      min-height: 640px;
+      max-width: 1100px;
       display: grid;
-      grid-template-columns: 1fr 1.08fr;
-      gap: 56px;
-      align-items: center;
-      padding: 0 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: 150px;
+      align-items: stretch;
+      padding: 0 24px;
       box-sizing: border-box;
       margin: auto 0;
       position: relative;
@@ -205,12 +204,12 @@
       }
     }
 
-    /* Left Form Column (Visual match to Reference Card in Screenshot 2) */
+    /* Left Form Column (Visual match to Right Box with equal sizing & Electric Border) */
     .auth-form-column {
       width: 100%;
-      max-width: 430px;
+      max-width: 440px;
       margin: 0 auto;
-      padding: 38px 36px 34px 36px;
+      padding: 36px 34px 32px 34px;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
@@ -220,6 +219,15 @@
       box-sizing: border-box;
       position: relative;
       isolation: isolate;
+      overflow: visible !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .auth-form-column > * {
+      position: relative;
+      z-index: 3;
     }
 
     .auth-form-column::before,
@@ -429,21 +437,24 @@
       color: #EF4444;
     }
 
-    /* Right Showcase Panel */
+    /* Right Showcase Panel (Sized to match Left Form Box) */
     .auth-showcase-panel {
       position: relative;
       width: 100%;
-      height: 610px;
+      max-width: 440px;
+      height: 100%;
+      min-height: 520px;
+      margin: 0 auto;
       border-radius: 28px;
       overflow: visible;
-      background: radial-gradient(circle at 48% 34%, #52341b 0%, #2f1e12 28%, #14251e 65%, #0d1a14 100%);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+      background: radial-gradient(circle at 50% 38%, #52341b 0%, #2f1e12 30%, #14251e 65%, #0d1a14 100%);
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.45);
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       align-items: center;
-      padding: 28px 24px 28px 24px;
+      padding: 24px 22px 22px 22px;
       box-sizing: border-box;
+      isolation: isolate;
     }
 
     /* Abstract decorative cards inside showcase */
@@ -489,7 +500,7 @@
       right: 170px;
     }
 
-    /* HisabAI Showcase Logo Brand with Interactive Shine & Touch */
+    /* HisabAI Showcase Logo Brand with Interactive Shine & Touch - Centered */
     .auth-showcase-brand {
       position: relative;
       z-index: 5;
@@ -497,16 +508,17 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin: auto 0 20px 0;
-      padding-top: 6px;
+      flex: 1;
+      margin: 0;
+      padding: 0;
       perspective: 900px;
     }
 
     .logo-interactive-card {
       position: relative;
       width: 100%;
-      max-width: 320px;
-      height: 280px;
+      max-width: 280px;
+      height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -521,8 +533,8 @@
     /* Ambient Breathing Warm Halo Glow */
     .logo-ambient-halo {
       position: absolute;
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(245, 158, 11, 0.26) 0%, rgba(217, 119, 6, 0.1) 45%, transparent 70%);
       filter: blur(14px);
@@ -540,7 +552,7 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 300px;
+      max-width: 240px;
       height: auto;
       display: block;
       filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
@@ -619,12 +631,13 @@
       position: relative;
       z-index: 5;
       width: 100%;
+      margin-top: auto;
       background: rgba(18, 32, 26, 0.78);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: 20px;
-      padding: 22px 22px 24px 22px;
+      padding: 16px 18px 18px 18px;
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
       box-sizing: border-box;
     }
@@ -3005,7 +3018,7 @@
       box-sizing: border-box;
       margin-top: 50px;
       margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
+      padding-bottom: 20px;
       overflow: hidden;
       width: 100%;
       position: relative;
@@ -3018,27 +3031,49 @@
 
     .footer-top-grid {
       display: grid;
-      grid-template-columns: 36% 1fr;
-      max-width: 1360px;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 56px 40px 32px 40px;
+      padding: 44px 24px 32px 24px;
       box-sizing: border-box;
-      gap: 36px;
+      gap: 150px;
+      align-items: stretch;
     }
 
-    /* --- Left Branding Panel --- */
+    /* --- Left Branding Panel (Styled as an Electric Animated Box) --- */
     .footer-brand-panel {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding-right: 24px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 32px 28px;
+      border: 1px solid var(--footer-border);
+      border-radius: 16px;
+      background-color: transparent;
+      box-sizing: border-box;
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+    }
+
+    .footer-brand-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
     }
 
     .footer-brand-logo {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .footer-logo-icon {
@@ -3056,20 +3091,20 @@
     }
 
     .footer-brand-name {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
       color: var(--footer-text-primary);
-      text-transform: uppercase;
     }
 
     .footer-hero-tagline {
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 600;
-      line-height: 1.25;
+      line-height: 1.65;
       letter-spacing: -0.02em;
       color: var(--footer-text-primary);
-      margin: 0 0 40px 0;
+      margin: 0;
+      text-align: center;
     }
 
     .footer-bottom-subtext {
@@ -3087,14 +3122,22 @@
       border: 1px solid var(--footer-border);
       border-radius: 16px;
       background-color: transparent;
-      align-self: start;
       position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+      box-sizing: border-box;
     }
 
     .footer-col {
-      padding: 36px 36px;
+      padding: 28px 20px;
       border-right: 1px solid var(--footer-border);
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .footer-col:last-child {
@@ -3105,8 +3148,9 @@
       font-size: 14px;
       font-weight: 600;
       color: var(--footer-text-primary);
-      margin: 0 0 22px 0;
+      margin: 0 0 16px 0;
       letter-spacing: -0.01em;
+      text-align: center;
     }
 
     .footer-col-list {
@@ -3115,12 +3159,16 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      align-items: center;
+      gap: 5px;
+      width: 100%;
     }
 
     .footer-col-list li {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.4;
+      text-align: center;
+      width: 100%;
     }
 
     .footer-col-list a {
@@ -3152,33 +3200,39 @@
       transform: translate(2px, -2px);
     }
 
-    /* --- Bottom Panel: Giant Typographic Watermark (ZERO BOTTOM GAP) --- */
+    /* --- Bottom Panel: Giant Typographic Watermark --- */
     .footer-watermark-container {
       width: 100%;
-      overflow: hidden;
-      line-height: 0.7;
-      margin-top: 28px;
-      margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
+      overflow: visible;
+      line-height: normal;
+      margin-top: 24px;
+      margin-bottom: 0;
+      padding-bottom: 24px;
       pointer-events: none;
       user-select: none;
       display: flex;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
+      box-sizing: border-box;
     }
 
     .giant-text {
       display: block;
       width: 100%;
       text-align: center;
-      font-size: 16vw;
+      font-size: 14vw;
       font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 0.7;
-      color: var(--footer-watermark);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #34d399;
+      opacity: 0.45;
+      text-shadow: 0 0 50px rgba(52, 211, 153, 0.25);
       user-select: none;
       white-space: nowrap;
-      margin-bottom: -0.06em;
+      margin: 0;
+      padding-top: 6px;
+      padding-bottom: 24px;
+      box-sizing: border-box;
     }
 
     /* --- Responsive Breakpoints --- */
@@ -3232,9 +3286,10 @@
       }
 
       .giant-text {
-        font-size: 22vw;
-        line-height: 0.74;
-        margin-bottom: -0.05em;
+        font-size: 16vw;
+        line-height: 1.2;
+        margin-bottom: 0;
+        padding-bottom: 20px;
       }
     }
   </style>
@@ -3247,7 +3302,7 @@
   <div id="authViewport" class="auth-viewport">
     <!-- Animated Video Background -->
     <div class="auth-video-bg-container" aria-hidden="true">
-      <video class="auth-video-bg" autoplay muted loop playsinline poster="/static/images/hisabai_logo_showcase.png">
+      <video class="auth-video-bg" autoplay muted loop playsinline poster="/static/images/hisabai_logo_showcase.png?v=3">
         <source src="/static/bg-video.mp4" type="video/mp4" />
         <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_084718_72a17915-4964-4059-afcd-22d59399b72e.mp4" type="video/mp4" />
       </video>
@@ -3264,10 +3319,10 @@
             <rect x="3" y="3" width="9" height="9" rx="2.5" fill="#09090b"/>
             <rect x="14" y="8" width="9" height="9" rx="2.5" fill="#09090b"/>
           </svg>
-          <span style="font-weight: 800; font-size: 1.25rem; color: #09090b; letter-spacing: -0.5px; margin-left: 8px;">Hisab<span style="color: #10B981;">AI</span></span>
+          <span style="font-weight: 800; font-size: 1.25rem; color: #09090b; letter-spacing: -0.5px; margin-left: 8px;">Hisab <span style="color: #10B981;">AI</span></span>
         </div>
 
-        <h1 class="auth-modern-title" id="authMainHeading">Welcome back!</h1>
+        <h1 class="auth-modern-title" id="authMainHeading">Welcome Back...!</h1>
         <p class="auth-modern-sub" id="authMainSub">
           Manage your store's financial records, daily balances, and voice-assisted digital ledger seamlessly
         </p>
@@ -3283,7 +3338,7 @@
           <div class="auth-input-group">
             <label class="auth-input-label" for="loginUsername">Email</label>
             <div class="auth-modern-input-wrapper">
-              <input type="text" id="loginUsername" class="auth-modern-input" placeholder="youremail@yourdomain.com" required autocomplete="username" />
+              <input type="text" id="loginUsername" class="auth-modern-input" placeholder="abcde@gmail.com" required autocomplete="username" />
             </div>
           </div>
 
@@ -3319,7 +3374,7 @@
           <div class="auth-input-group">
             <label class="auth-input-label" for="signupEmail">Email</label>
             <div class="auth-modern-input-wrapper">
-              <input type="email" id="signupEmail" class="auth-modern-input" placeholder="youremail@yourdomain.com" required autocomplete="email" />
+              <input type="email" id="signupEmail" class="auth-modern-input" placeholder="abcde@gmail.com" required autocomplete="email" />
             </div>
           </div>
 
@@ -3398,11 +3453,11 @@
           <div class="showcase-shape-card showcase-shape-3"></div>
         </div>
 
-        <!-- HisabAI 3D Showcase Logo Brand with Interactive Shine & Touch Effect -->
+        <!-- Hisab AI 3D Showcase Logo Brand with Interactive Shine & Touch Effect -->
         <div class="auth-showcase-brand" id="authShowcaseLogoContainer">
-          <div class="logo-interactive-card" id="logoInteractiveCard" title="HisabAI Intelligent Khata">
+          <div class="logo-interactive-card" id="logoInteractiveCard" title="Hisab AI - AI Powered Ledger">
             <div class="logo-ambient-halo"></div>
-            <img src="/static/images/hisabai_logo_showcase.png" alt="HisabAI - Intelligent Khata Ledger" class="auth-showcase-logo-img" id="authShowcaseLogoImg" />
+            <img src="/static/images/hisabai_logo_showcase.png?v=3" alt="Hisab AI - AI Powered Ledger" class="auth-showcase-logo-img" id="authShowcaseLogoImg" />
             <div class="logo-shine-sheen"></div>
             <div class="logo-touch-spotlight" id="logoTouchSpotlight"></div>
           </div>
@@ -3415,7 +3470,7 @@
             <span class="auth-showcase-tag">Voice Ledger</span>
           </div>
           <p class="auth-testimonial-quote">
-            "HisabAI has completely transformed our daily shop ledger. What used to take hours of manual notebook calculation every night is now instantly automated with voice."
+            "Hisab AI has completely transformed our daily shop ledger. What used to take hours of manual notebook calculation every night is now instantly automated with voice."
           </p>
         </div>
       </div>
@@ -3432,11 +3487,10 @@
               <div class="footer-logo-icon">
                 <span class="footer-logo-mark">H</span>
               </div>
-              <span class="footer-brand-name">HISABAI</span>
+              <span class="footer-brand-name">Hisab AI</span>
             </div>
-            <h2 class="footer-hero-tagline">Transform your khata, <br> elevate your business.</h2>
+            <h2 class="footer-hero-tagline">Transform your Ledger <br> Elevate your Business</h2>
           </div>
-          <p class="footer-bottom-subtext">Premium digital ledger platform since 2026. Made by Team Matrix.</p>
         </aside>
 
         <!-- Right Panel: Navigation Grid (2 Columns: Developer & Contact) -->
@@ -3444,18 +3498,11 @@
           <div class="footer-col">
             <h3 class="footer-col-header">Developer</h3>
             <ul class="footer-col-list">
-              <li class="footer-static-item">Team Matrix</li>
-              <li class="footer-static-item">Mohit Goyal</li>
-              <li>
-                <a href="https://github.com/Mohit-devv24" target="_blank" rel="noopener noreferrer" class="external-link">
-                  GitHub <span class="arrow-glyph">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/mohit-goyal-tech" target="_blank" rel="noopener noreferrer" class="external-link">
-                  LinkedIn <span class="arrow-glyph">↗</span>
-                </a>
-              </li>
+              <li class="footer-static-item" style="font-weight: 700; color: #FFFFFF; margin-bottom: 2px;">Team Matrix</li>
+              <li class="footer-static-item">(Tausif Raza)</li>
+              <li class="footer-static-item">(Mohit Goyal)</li>
+              <li class="footer-static-item">(Ayush Yadav)</li>
+              <li class="footer-static-item">(Sanskar Singh)</li>
             </ul>
           </div>
 
@@ -3463,15 +3510,25 @@
           <div class="footer-col">
             <h3 class="footer-col-header">Contact</h3>
             <ul class="footer-col-list">
-              <li class="footer-static-item">+91 6375940658</li>
+              <li class="footer-static-item" style="font-weight: 700; color: #FFFFFF; margin-bottom: 2px;">Team Matrix</li>
               <li>
-                <a href="mailto:mohitagarwal123456k@gmail.com" aria-label="Email Support">
+                <a href="mailto:rtausif392@gmail.com" aria-label="Email Tausif">
+                  rtausif392@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:mohitagarwal123456k@gmail.com" aria-label="Email Mohit">
                   mohitagarwal123456k@gmail.com
                 </a>
               </li>
               <li>
-                <a href="mailto:mohitagarwal123456k@gmail.com" class="external-link" aria-label="Open Support Email">
-                  Support Portal <span class="arrow-glyph" aria-hidden="true">↗</span>
+                <a href="mailto:ayush19032007@gmail.com" aria-label="Email Ayush">
+                  ayush19032007@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:2024chillu@gmail.com" aria-label="Email Sanskar">
+                  2024chillu@gmail.com
                 </a>
               </li>
             </ul>
@@ -3481,7 +3538,7 @@
 
       <!-- Bottom Panel: Giant Watermark (ZERO BOTTOM GAP) -->
       <div class="footer-watermark-container" aria-hidden="true">
-        <span class="giant-text">HISAB AI</span>
+        <span class="giant-text">Hisab AI</span>
       </div>
     </footer>
   </div>
@@ -3512,7 +3569,7 @@
         <div class="sidebar-brand">
           <div class="sidebar-brand-icon">📖</div>
           <div>
-            <div class="sidebar-brand-name">Hisab<span>AI</span></div>
+            <div class="sidebar-brand-name">Hisab <span>AI</span></div>
             <span class="sidebar-shop-pill" id="sidebarShopPill">My Store</span>
           </div>
         </div>
@@ -4703,11 +4760,10 @@
                 <div class="footer-logo-icon">
                   <span class="footer-logo-mark">H</span>
                 </div>
-                <span class="footer-brand-name">HISABAI</span>
+                <span class="footer-brand-name">Hisab AI</span>
               </div>
-              <h2 class="footer-hero-tagline">Transform your khata, <br> elevate your business.</h2>
+              <h2 class="footer-hero-tagline">Transform your Ledger <br> Elevate your Business</h2>
             </div>
-            <p class="footer-bottom-subtext">Premium digital ledger platform since 2026. Made by Team Matrix.</p>
           </aside>
 
           <!-- Right Panel: Navigation Grid (2 Columns: Developer & Contact) -->
@@ -4715,18 +4771,11 @@
             <div class="footer-col">
               <h3 class="footer-col-header">Developer</h3>
               <ul class="footer-col-list">
-                <li class="footer-static-item">Team Matrix</li>
-                <li class="footer-static-item">Mohit Goyal</li>
-                <li>
-                  <a href="https://github.com/Mohit-devv24" target="_blank" rel="noopener noreferrer" class="external-link">
-                    GitHub <span class="arrow-glyph">↗</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/mohit-goyal-tech" target="_blank" rel="noopener noreferrer" class="external-link">
-                    LinkedIn <span class="arrow-glyph">↗</span>
-                  </a>
-                </li>
+                <li class="footer-static-item" style="font-weight: 700; color: #FFFFFF; margin-bottom: 2px;">Team Matrix</li>
+              <li class="footer-static-item">(Tausif Raza)</li>
+              <li class="footer-static-item">(Mohit Goyal)</li>
+              <li class="footer-static-item">(Ayush Yadav)</li>
+              <li class="footer-static-item">(Sanskar Singh)</li>
               </ul>
             </div>
 
@@ -4734,16 +4783,25 @@
             <div class="footer-col">
               <h3 class="footer-col-header">Contact</h3>
               <ul class="footer-col-list">
-                <li class="footer-static-item">+91 6375940658</li>
+                <li class="footer-static-item" style="font-weight: 700; color: #FFFFFF; margin-bottom: 2px;">Team Matrix</li>
                 <li>
-                  <a href="mailto:mohitagarwal123456k@gmail.com" aria-label="Email Support">
+                  <a href="mailto:rtausif392@gmail.com" aria-label="Email Tausif">
+                    rtausif392@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:mohitagarwal123456k@gmail.com" aria-label="Email Mohit">
                     mohitagarwal123456k@gmail.com
                   </a>
                 </li>
                 <li>
-                  <!-- THE FIX: Direct mailto link for Support Portal -->
-                  <a href="mailto:mohitagarwal123456k@gmail.com" class="external-link" aria-label="Open Support Email">
-                    Support Portal <span class="arrow-glyph" aria-hidden="true">↗</span>
+                  <a href="mailto:ayush19032007@gmail.com" aria-label="Email Ayush">
+                    ayush19032007@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:2024chillu@gmail.com" aria-label="Email Sanskar">
+                    2024chillu@gmail.com
                   </a>
                 </li>
               </ul>
@@ -4753,7 +4811,7 @@
 
         <!-- Bottom Panel: Giant Watermark (ZERO BOTTOM GAP) -->
         <div class="footer-watermark-container" aria-hidden="true">
-          <span class="giant-text">HISAB AI</span>
+          <span class="giant-text">Hisab AI</span>
         </div>
       </footer>
 
@@ -5494,7 +5552,7 @@
       const action = document.getElementById('authSwitchAction');
 
       if (mode === 'login') {
-        if (heading) heading.textContent = 'Welcome back!';
+        if (heading) heading.textContent = 'Welcome Back...!';
         if (sub) sub.textContent = 'Manage your store\'s financial records, daily balances, and voice-assisted digital ledger seamlessly';
         if (prompt) prompt.textContent = "Don't have an account? ";
         if (action) {
@@ -5639,7 +5697,7 @@
         settings: "⚙️ Shop Settings"
       };
 
-      document.getElementById('pageTitleDisplay').textContent = titles[viewId] || "HisabAI";
+      document.getElementById('pageTitleDisplay').textContent = titles[viewId] || "Hisab AI";
 
       // Activate desktop & mobile navs
       const navMap = {
@@ -8896,10 +8954,47 @@ void main() {
           });
         }
 
-        // 2. Foot bar: .footer-nav-grid in both auth footer and dashboard footer
+        // 2. Left Box: Auth Form Column on Login Screen (.auth-form-column)
+        const authForm = document.querySelector('.auth-form-column');
+        if (authForm && authForm.dataset.electricBorderInit !== 'true') {
+          ElectricBorder.attach(authForm, {
+            color: '#7df9ff',
+            glowColor: '#38bdf8',
+            speed: 1,
+            chaos: 0.5,
+            spread: 0.6,
+            strands: 3,
+            thickness: 1.5,
+            borderRadius: 28,
+            active: true,
+            interactive: true,
+            theme: 'dark'
+          });
+        }
+
+        // 3. Foot bar: .footer-nav-grid in both auth footer and dashboard footer
         document.querySelectorAll('.footer-nav-grid').forEach(navGrid => {
           if (navGrid && navGrid.dataset.electricBorderInit !== 'true') {
             ElectricBorder.attach(navGrid, {
+              color: '#7df9ff',
+              glowColor: '#38bdf8',
+              speed: 1,
+              chaos: 0.5,
+              spread: 0.6,
+              strands: 3,
+              thickness: 1.5,
+              borderRadius: 16,
+              active: true,
+              interactive: true,
+              theme: 'dark'
+            });
+          }
+        });
+
+        // 4. Footer Brand Panel: .footer-brand-panel in both auth footer and dashboard footer
+        document.querySelectorAll('.footer-brand-panel').forEach(brandPanel => {
+          if (brandPanel && brandPanel.dataset.electricBorderInit !== 'true') {
+            ElectricBorder.attach(brandPanel, {
               color: '#7df9ff',
               glowColor: '#38bdf8',
               speed: 1,
